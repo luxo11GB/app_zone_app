@@ -304,16 +304,37 @@
                         android:text="🚀 ¡Firebase Authentication Configurado!"
                         android:textColor="@color/gaming_neon_green"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Has iniciado sesión exitosamente. Tu aplicación gaming está lista para usar Firebase Authentication con el tema personalizado."
-                        android:textColor="@color/gaming_text_secondary"
-                        android:textSize="14sp"
-                        android:lineSpacingExtra="2dp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="✅ Registrar Juego"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@color/gaming_neon_green"
+                        app:cornerRadius="15dp"
+                        android:layout_marginBottom="10dp"
+                        app:iconPadding="8dp"
+                        app:rippleColor="?attr/colorOnPrimary" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewGames"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="📋 Ver Juegos"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@color/gaming_cyan"
+                        app:cornerRadius="15dp"
+                        app:iconPadding="8dp"
+                        app:rippleColor="?attr/colorOnPrimary" />
+
 
                 </LinearLayout>
 

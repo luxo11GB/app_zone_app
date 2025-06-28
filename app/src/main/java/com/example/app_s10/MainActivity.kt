@@ -15,6 +15,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
+
 class MainActivity : AppCompatActivity() {
     
     private lateinit var auth: FirebaseAuth
@@ -27,7 +28,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardAchievements: CardView
     private lateinit var cardProfile: CardView
     private lateinit var cardSettings: CardView
-    
+    private lateinit var btnAddGame: MaterialButton
+    private lateinit var btnViewGames: MaterialButton
+
+
     companion object {
         private const val TAG = "MainActivity"
     }
@@ -70,6 +74,8 @@ class MainActivity : AppCompatActivity() {
         cardAchievements = findViewById(R.id.card_achievements)
         cardProfile = findViewById(R.id.card_profile)
         cardSettings = findViewById(R.id.card_settings)
+        btnAddGame = findViewById(R.id.btnAddGame)
+        btnViewGames = findViewById(R.id.btnViewGames)
     }
     
     private fun setupWindowInsets() {
@@ -125,6 +131,17 @@ class MainActivity : AppCompatActivity() {
         cardSettings.setOnClickListener {
             showFeatureComingSoon("Configuración")
         }
+
+
+        btnAddGame.setOnClickListener {
+            startActivity(Intent(this, AddGameActivity::class.java))
+        }
+
+
+        btnViewGames.setOnClickListener {
+            startActivity(Intent(this, GamesListActivity::class.java))
+        }
+
     }
     
     private fun showLogoutConfirmationDialog() {
